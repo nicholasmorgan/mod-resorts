@@ -36,7 +36,8 @@ COPY --chown=1001:0 --from=build-stage /sharedlibs/ /opt/ol/wlp/usr/shared/confi
 #COPY --from=build-stage /config/ /config/
 #COPY --from=build-stage /sharedlibs/ /opt/ol/wlp/usr/shared/config/lib/global
 
-USER root
+USER 0
+RUN cat configure.sh
 RUN configure.sh
 USER 1001
 
