@@ -23,7 +23,7 @@ RUN mkdir -p /config/apps && \
         cp ./src/main/liberty/lib/* /sharedlibs; \
     fi
 
-FROM websphere-liberty:springBoot2 
+FROM openliberty/open-liberty
 
 ARG SSL=true
 
